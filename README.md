@@ -25,10 +25,12 @@ assets/css/style.css — responsive styling
 assets/js/app.js — ranking, collection ordering, storage, and canvas export
 assets/js/png.js — PNG metadata encoding and decoding
 assets/js/catalog.js — image catalog with data URLs for offline canvas export
-assets/img/ — 112 optimized can images, supplied logo, and favicon
+assets/img/ — 113 optimized can images, supplied logo, and favicon
 
 Can images were resized to 240 pixels high. The original supplied ZIP is unchanged.
 When replacing or adding can images, also update catalog.js.
 
 Project: https://github.com/JustinVerstijnen/MonsterTierTool
 Logo: https://sajvwebsiteblobstorage.blob.core.windows.net/blog/tools-2375/logo.svg
+
+My personal ranking opens the bundled ranking PNG in a new tab without changing your list.
