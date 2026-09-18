@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Monster Tier — your taste, your ranking</title>
+  <meta name="description" content="Create your own Monster tier list. Export a PNG and import it later to keep ranking.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/catalog.js"></script><script defer src="assets/js/png.js"></script><script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="./index.html"><img class="brand-logo" src="assets/img/logo.svg" alt="" width="48" height="48"> MONSTER<span class="brand-light">TIER</span></a></header>
+  <main>
+    <section class="heading"><div><p class="eyebrow">YOUR COLLECTION. YOUR CALL.</p><h1>Rank your <em>Monsters</em></h1><p class="intro">From all-time favorites to once was enough.</p></div><div class="actions"><button id="import">↥ &nbsp; Import PNG</button><button id="export" class="primary">↓ &nbsp; Export PNG</button><input type="file" id="file" accept="image/png,.png" hidden></div></section>
+    <section class="workspace" aria-label="Tier list">
+      <div class="board-toolbar"><input id="title" aria-label="Your tier list title" maxlength="70" value="My Monster tier list"><span id="saved" role="status">Saved locally</span></div>
+      <div id="board"></div>
+      <div class="board-footer"><span id="ranked">0 ranked</span><span>Drag a can, or click it and choose a tier.</span><button id="add">+ Add tier</button></div>
+    </section>
+    <section class="collection"><div class="collection-heading"><div><h2>The collection <span id="count"></span></h2><p>Which one deserves the top spot?</p></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search flavors…" aria-label="Search flavors"></label></div><div id="pool" class="pool" aria-label="Not ranked yet"></div><p id="empty" hidden>No flavors found.</p></section>
+    <footer><span>Your list is saved automatically in this browser.</span><a class="repo-link" href="https://github.com/JustinVerstijnen/MonsterTierTool" target="_blank" rel="noopener noreferrer">Project on GitHub ↗</a><button id="reset" class="quiet">Start over</button></footer>
+  </main>
+  <dialog id="picker"><form method="dialog"><button class="close" aria-label="Close">×</button></form><h2 id="picker-title">Choose a tier</h2><p>Choose a tier to move this can.</p><div id="choices"></div></dialog>
+  <dialog id="confirm"><h2 id="confirm-title"></h2><p id="confirm-text"></p><div class="actions"><button id="cancel">Cancel</button><button id="accept" class="primary">Continue</button></div></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>
